@@ -8,8 +8,8 @@ Ke = 220
 rf = .0925
 stand_dev = .2'''
 
-def d_values(T, S0, K, rf, stand_dev):
-	d1 = (np.log(S0 / K) + (rf + stand_dev**2 / 2)*T) / (stand_dev * math.sqrt(T))
+def d_values(T, S0, Ke, rf, stand_dev):
+	d1 = (np.log(S0 / Ke) + (rf + stand_dev**2 / 2)*T) / (stand_dev * math.sqrt(T))
 	# d2 = (ln(S0 / K) + (rf - stand_dev**2 / 2)*T) / (stand_dev * math.sqrt(T))
 	d2 = d1 - (stand_dev * math.sqrt(T))
 	return d1, d2
